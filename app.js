@@ -31,6 +31,27 @@ function Images(name, source) {
   this.views = 0;
   allImages.push(this);
   productsNames.push(this.name);
+
+}
+
+function settingItem(){
+  let data=JSON.stringify(allImages);
+  localStorage.setItem('Images',data);
+}
+
+function gettingItems(){
+  let stringObject=localStorage.getItem('Images');
+  let regularObject=JSON.parse(stringObject);
+  if (regularObject !==null) {
+    allImages=regularObject;
+    /*for (let i = 0; i < allImages.length; i++) {
+      productsVotes.push(allImages[i].votes);
+      productsViews.push(allImages[i].views);
+    }*/
+    //console.log(regularObject);
+    //render();
+    //chartall();
+  }
 }
 
 new Images('bag', 'img/bag.jpg');
@@ -129,6 +150,7 @@ function userClick(event) {
           productsViews.push(allImages[i].views);
         }
         chartall();
+        settingItem();
       }
     }
   } else {
@@ -166,6 +188,7 @@ function userClick(event) {
           productsViews.push(allImages[i].views);
         }
         chartall();
+        settingItem();
       }
     }
   }
@@ -214,3 +237,5 @@ function chartall() {
 console.log('names', productsNames);
 console.log('votes', productsVotes);
 console.log('shown', productsViews);
+
+gettingItems();
