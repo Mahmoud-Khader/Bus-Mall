@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(238, 238, 238);
+}
+header nav ul li {
+    display: inline-block;
+     padding: 10px;
+     font-size: x-large;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        color: rgb(245, 223, 227);
+
+    }
+    h3{
+        color: rgb(3, 3, 59);
+    }
+main h1{
+    text-align: center;
+    color: rgb(189, 54, 88);
+
+}
+header{
+    background-color: rgb(58, 58, 128);
+}
+img{
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    border: solid 5px rgb(113, 113, 245);
+    float: right;
+    margin-top: 80px;
+    margin-right: 80px;
+}
+#button{
+    float: left;
+}
